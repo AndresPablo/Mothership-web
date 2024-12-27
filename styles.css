@@ -1,0 +1,178 @@
+/* General */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: var(--primary-color, #00ff00); /* Color inicial verde */
+    text-align: center;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #001a00;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    box-shadow: 0 0 5px #00ff00;
+}
+
+button:hover {
+    background-color: #003300;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+section {
+    margin: 20px auto;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    position: relative;
+}
+
+/* Footer se fija en la parte inferior solo si hay suficiente espacio */
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #006600;
+}
+
+/* Mantener las scanlines sin bloquear el scroll */
+body::before {
+    content: '';
+    position: fixed; /* Cambia de absolute a fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 0,
+        rgba(0, 0, 0, 0.2) 1px,
+        rgba(0, 255, 0, 0.02) 1px,
+        rgba(0, 255, 0, 0.02) 2px
+    );
+    pointer-events: none; /* Permite interactuar con el contenido */
+    z-index: 10;
+}
+
+/* Asegurar altura mínima del contenido para scroll */
+main {
+    min-height: 100vh; /* Hace que el contenido llene la ventana */
+    padding-bottom: 40px; /* Espacio para no cortar contenido */
+}
+
+/* Estilos responsivos */
+
+/* Escritorio: 3 columnas */
+@media screen and (min-width: 768px) {
+    main {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    section {
+        max-width: 30%; /* Limita cada columna al 30% del ancho */
+        flex: 1; /* Ajuste automático */
+    }
+}
+
+/* Móviles: Secciones apiladas */
+@media screen and (max-width: 767px) {
+    main {
+        display: flex;
+        flex-direction: column; /* Apila las secciones verticalmente */
+        align-items: center;
+    }
+
+    section {
+        max-width: 100%; /* Ocupa todo el ancho */
+    }
+}
+
+
+/* Estadísticas */
+#stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.stat-box {
+    width: 60px;
+    height: 60px;
+    background-color: #001a00;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.8rem;
+    box-shadow: 0 0 5px #00ff00;
+    position: relative;
+}
+
+.stat-title {
+    position: absolute;
+    top: -15px; /* Coloca el título encima del cuadro */
+    font-size: 0.7rem;
+    color: #00ff00;
+}
+
+/* Colores dinámicos para títulos */
+.stat-title, .save-title {
+    color: var(--primary-color, #00FF00);
+}
+
+/* Salvaciones */
+#saves-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.save-box {
+    width: 60px;
+    height: 60px;
+    background-color: transparent; /* Sin fondo */
+    border: 2px solid #00ff00; /* Borde verde para definir el rombo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    box-shadow: 0 0 5px #00ff00;
+    position: relative;
+}
+
+/* Ajustar el título fuera del rombo */
+.save-title {
+    position: relative;
+    top: -20px; /* Coloca el título arriba del rombo */
+    font-size: 0.7rem;
+    color: #00ff00;
+}
+
+.save-diamond, .stat-box {
+    border: 2px solid var(--primary-color, #00ff00);
+    box-shadow: 0 0 5px var(--primary-color, #00ff00);
+}
+

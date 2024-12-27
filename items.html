@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Juego</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom  CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="tables.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Columna 1: Botones en vertical -->
+            <div class="col-md-2">
+                <h3>Opciones</h3>
+                <button class="btn btn-primary w-100 mb-2" onclick="cargarItems('armas')">Armas</button>
+                <button class="btn btn-primary w-100 mb-2" onclick="cargarItems('armaduras')">Armaduras</button>
+                <button class="btn btn-primary w-100 mb-2" onclick="cargarItems('items')">Items</button>
+                <button class="btn btn-primary w-100 mb-2" onclick="cargarItems('ciberimplantes')">Ciberimplantes</button>
+                <button class="btn btn-primary w-100 mb-2" onclick="cargarItems('neuroimplantes')">Neuroimplantes</button>
+                <button class="btn btn-primary w-100 mb-2" onclick="cargarItems('servicios')">Servicios</button>
+                <button class="btn btn-primary w-100 mb-2" onclick="cargarItems('mercenarios')">Mercenarios</button>
+            </div>
+
+            <!-- Columna 2: Imagen -->
+            <div class="col-md-4 d-none">
+                <h3>Imagen del Juego</h3>
+                <img src="https://via.placeholder.com/300x200" alt="Imagen del juego" class="img-fluid">
+            </div>
+
+            <!-- Columna 3: Tabla de items -->
+            <div class="col-md-10">
+                <h3>Catálogo de Items</h3>
+                <table id="inventory-table" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <!-- Los items se cargarán aquí -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div id="color-toggle">
+        <button id="color-btn"></button>
+    </div>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+/* Estilo para la tabla del Inventario */
+#inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #001a00; /* Fondo oscuro sutil */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Glow alrededor de la tabla */
+}
+
+#inventory-table th {
+    color: var(--primary-color, #00FF00); /* Texto dinámico */
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #002200; /* Encabezado destacado */
+    border-bottom: 2px solid var(--primary-color, #00FF00); /* Línea de separación */
+}
+
+#inventory-table td {
+    color: var(--primary-color, #00FF00); /* Texto dinámico */
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 255, 0, 0.5); /* Línea horizontal sutil */
+}
+
+#inventory-table tr:last-child td {
+    border-bottom: none; /* Sin línea para la última fila */
+}
+
+#inventory-table tr:hover {
+    background-color: rgba(0, 255, 0, 0.1); /* Efecto hover */
+}

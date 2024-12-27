@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Personajes - Mothership</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="tables.css">
+</head>
+<body>
+    <header>
+        <h2>Generador de Personajes - Mothership</h2>
+    </header>
+
+    
+  <main id="character-container">
+    <!-- Columna 1: Información básica -->
+    <section id="column-1">
+        <h3>Información Básica</h3>
+        <p><strong>Nombre:</strong> <span id="name-display">-</span></p>
+        <p><strong>Clase:</strong> <span id="class-display">-</span></p>
+        <p><strong>Título:</strong> <span id="title-display">-</span></p>
+        
+        <h3>Estadísticas</h3>
+        <div id="stats-container">
+            <div class="stat-box">
+                <span class="stat-title">STR</span>
+                <span id="str-stat">-</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-title">SPD</span>
+                <span id="spd-stat">-</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-title">INT</span>
+                <span id="int-stat">-</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-title">COM</span>
+                <span id="com-stat">-</span>
+            </div>
+        </div>
+        
+        <h3>Salvaciones</h3>
+        <div id="saves-container">
+            <div class="save-box">
+                <span class="save-title">SAN</span>
+                <span id="san-save">-</span>
+            </div>
+            <div class="save-box">
+                <span class="save-title">FEAR</span>
+                <span id="fear-save">-</span>
+            </div>
+            <div class="save-box">
+                <span class="save-title">BODY</span>
+                <span id="body-save">-</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Columna 2: Inventario -->
+    <section id="column-2">
+        <h2>Inventario</h2>
+        <table id="inventory-table">
+            <thead>
+                <tr>
+                    <th>Ítem</th>
+                    <th>Descripción</th>
+                    <th>Costo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+      <p>
+        *[+] Ventaja [-] Desventaja
+      </p>
+    </section>
+
+    <!-- Columna 3: Habilidades -->
+    <section id="column-3">
+        <h2>Habilidades</h2>
+        <p>Aquí irán las habilidades del personaje.</p>
+    </section>
+    
+    <div id="color-toggle">
+        <button id="color-btn"></button>
+    </div>
+    
+</main>
+
+  
+    <footer>
+        <p>Basado en Mothership RPG - Manual del Jugador</p>
+    </footer>
+        <script>
+      function displayLoadout(className) {
+          const loadout = generateLoadout(className);
+          const display = document.getElementById('loadout-display');
+          display.innerHTML = `
+              <h3>Clase: ${loadout.class}</h3>
+              <ul>
+                  ${loadout.items.map(item => `<li>${item}</li>`).join('')}
+              </ul>
+          `;
+      }
+      </script>
+    <script src="script.js"></script>
+</body>
+</html>

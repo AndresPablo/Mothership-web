@@ -1,0 +1,247 @@
+{
+  "clases": [
+    {
+      "nombre": "Marine",
+      "descripcion": "Soldados entrenados para combate y situaciones de alto riesgo.",
+      "modificadores": {
+        "estadisticas": {
+          "combate": 10
+        },
+        "salvaciones": {
+          "miedo": 20,
+          "cuerpo": 10
+        },
+        "otros": {
+          "heridas_maximas": "+1"
+        }
+      },
+      "reaccion_panico": "Cuando entras en pánico, todos los aliados cercanos deben hacer una salvación de miedo."
+    },
+    {
+      "nombre": "Científico",
+      "descripcion": "Doctores, investigadores y exploradores intelectuales.",
+      "modificadores": {
+        "estadisticas": {
+          "intelecto": 10
+        },
+        "salvaciones": {
+          "sanidad": 30
+        },
+        "otros": {
+          "estadistica_a_elegir": "+5"
+        }
+      },
+      "reaccion_panico": "Cuando fallas una salvación de sanidad, todos los aliados cercanos ganan 1 de estrés."
+    },
+    {
+      "nombre": "Android",
+      "descripcion": "Seres sintéticos diseñados para diversas tareas, aunque a menudo inquietan a los humanos.",
+      "modificadores": {
+        "estadisticas": {
+          "intelecto": 20,
+          "otra_estadistica": "-10"
+        },
+        "salvaciones": {
+          "miedo": 60
+        },
+        "otros": {
+          "heridas_maximas": "+1"
+        }
+      },
+      "reaccion_panico": "Las salvaciones de miedo hechas por aliados cercanos tienen desventaja."
+    },
+    {
+      "nombre": "Tripulante (Teamster)",
+      "descripcion": "Trabajadores rudos de cuello azul: mecánicos, mineros y pilotos.",
+      "modificadores": {
+        "estadisticas": {
+          "todas": 5
+        },
+        "salvaciones": {
+          "todas": 10
+        }
+      },
+      "reaccion_panico": "Una vez por sesión, puedes tener ventaja en una tirada de pánico."
+    }
+  ],
+  
+  
+  "armas": [
+    {
+      "nombre": "Hacha de abordaje",
+      "costo": 150,
+      "alcance": "Cercano",
+      "daño": "2d10",
+      "tiros": "N/A",
+      "herida": "Corte profundo [+]",
+      "especial": null,
+      "imagen": "",
+      "tipo": "arma-corta"
+    },
+    {
+      "nombre": "Escopeta de combate",
+      "costo": 1400,
+      "alcance": "Corto",
+      "daño": "4d10",
+      "tiros": 4,
+      "herida": "Disparo",
+      "especial": "1d10 de daño a largo alcance.",
+      "imagen": "",
+      "tipo": "arma-corta"
+    },
+    {
+      "nombre": "Rifle de pulsos",
+      "costo": 2400,
+      "alcance": "Largo",
+      "daño": "3d10",
+      "tiros": 5,
+      "herida": "Disparo",
+      "especial": null,
+      "imagen": "",
+      "tipo": "arma-corta"
+    },
+    {
+      "nombre": "Revólver",
+      "costo": 750,
+      "alcance": "Corto",
+      "daño": "1d10+1",
+      "tiros": 6,
+      "herida": "Disparo",
+      "especial": null,
+      "imagen": "",
+      "tipo": "arma-corta"
+    },
+    {
+      "nombre": "Cortador láser",
+      "costo": 1200,
+      "alcance": "Largo",
+      "daño": "1d100",
+      "tiros": 6,
+      "herida": "Corte [+] o Gore [+]",
+      "especial": "Requiere recarga de 1 ronda entre disparos.",
+      "imagen": "",
+      "tipo": "arma-corta"
+    },
+    {
+      "nombre": "Lanzallamas",
+      "costo": 4000,
+      "alcance": "Corto",
+      "daño": "2d10",
+      "tiros": 4,
+      "herida": "Fuego/Explosivos [+]",
+      "especial": "Tirada de salvación de cuerpo o encenderse en llamas (2d10 de daño por ronda).",
+      "imagen": "",
+      "tipo": "arma-corta"
+    },
+    {
+      "nombre": "Rifle inteligente",
+      "costo": 5000,
+      "alcance": "Extremo",
+      "daño": "4d10 (Anti-armadura)",
+      "tiros": 3,
+      "herida": "Disparo [+]",
+      "especial": "[-] en chequeo de combate al disparar a rango cercano.",
+      "imagen": "",
+      "tipo": "arma-corta"
+    },
+    {
+      "nombre": "Pistola tranquilizante",
+      "costo": 250,
+      "alcance": "Corto",
+      "daño": "1d5",
+      "tiros": 6,
+      "herida": "Contusión",
+      "especial": "Si hace daño: tirada de salvación de cuerpo o 1d10 rondas inconsciente.",
+      "imagen": "",
+      "tipo": "arma-corta"
+    },
+    {
+      "nombre": "Pistola de clavos",
+      "costo": 150,
+      "alcance": "Corto",
+      "daño": "1d5",
+      "tiros": 32,
+      "herida": "Sangrado",
+      "especial": null,
+      "imagen": "",
+      "tipo": "arma-corta"
+    },
+    {
+      "nombre": "Arma de espuma",
+      "costo": 500,
+      "alcance": "Corto",
+      "daño": "1",
+      "tiros": 3,
+      "herida": "Contusión",
+      "especial": "Tirada de salvación de cuerpo o quedar atrapado. Fuerza [-] para escapar.",
+      "imagen": "",
+      "tipo": "arma-corta"
+    },
+    {
+      "nombre": "Soldador de mano",
+      "costo": 250,
+      "alcance": "Adyacente",
+      "daño": "1d10",
+      "tiros": "∞",
+      "herida": "Corte",
+      "especial": "Puede cortar puertas de esclusa.",
+      "imagen": "",
+      "tipo": "arma-corta"
+    }
+  ],
+  
+  "loadouts": [
+    {
+      "class": "Marine",
+      "items": ["Pulse Rifle", "Patch Kit", "Flashlight"]
+    },
+    {
+      "class": "Android",
+      "items": ["Laser Cutter", "Flashlight"]
+    }
+  ],
+  
+  
+    "armaduras": [
+    {
+      "nombre": "Ropa estándar de la tripulación",
+      "costo": 100,
+      "puntos_armadura": 1,
+      "oxigeno": "Ninguno",
+      "velocidad": "Normal",
+      "especial": "Ropa básica."
+    },
+    {
+      "nombre": "Traje espacial (Vaccsuit)",
+      "costo": 10000,
+      "puntos_armadura": 3,
+      "oxigeno": "12 horas",
+      "velocidad": "[-]",
+      "especial": "Incluye comunicaciones de corto alcance, linterna y protección contra radiación. Descompresión en 1d5 rondas si se perfora."
+    },
+    {
+      "nombre": "Traje de peligro (Hazard Suit)",
+      "costo": 4000,
+      "puntos_armadura": 5,
+      "oxigeno": "1 hora",
+      "velocidad": "Normal",
+      "especial": "Protección ambiental, filtro de aire, y reciclaje de agua (1L dura 4 días)."
+    },
+    {
+      "nombre": "Armadura estándar de combate",
+      "costo": 2000,
+      "puntos_armadura": 7,
+      "oxigeno": "Ninguno",
+      "velocidad": "Normal",
+      "especial": "Incluye comunicaciones de corto alcance."
+    },
+    {
+      "nombre": "Armadura avanzada de combate",
+      "costo": 12000,
+      "puntos_armadura": 10,
+      "oxigeno": "1 hora",
+      "velocidad": "[-]",
+      "especial": "Incluye HUD, cámara corporal y blindaje exoesquelético (+ a pruebas de fuerza). Reducción de daño: 3."
+    }
+  ]
+}
